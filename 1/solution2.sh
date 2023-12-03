@@ -1,7 +1,5 @@
 #!/bin/bash
 
-
-
 first_numbers=(`cat puzzle_input.txt | 
 sed -E 's/(one|two|three|four|five|six|seven|eight|nine)/_&_/' | 
 sed 's/_one_/1/g' |
