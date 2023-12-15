@@ -36,7 +36,7 @@ total_length = 0
 
 #print(str(len(map)) + " " + str(len(map[0])))
 # calculate distances
-expansion_factor = 1000000
+expansion_factor = 999999
 for i in range(len(map)):
     for j in range(len(map[0])):
         if map[i][j] == "#":
@@ -63,7 +63,7 @@ for i in range(len(map)):
                         total_length += abs(l-j)+abs(k-i)
                         increment = 0
                         for x in expanded_columns:
-                            if x > j and x < l:
+                            if (x > j and x < l) or (x > l and x < j):
                                 increment += 1
                         for x in expanded_rows:
                             if x > i and x < k:
